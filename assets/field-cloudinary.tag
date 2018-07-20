@@ -99,15 +99,15 @@
             this.meta = App.$.extend(this.meta, opts.meta || {});
 
             cloudinary.setCloudName(opts.cloudName);
-            $('#upload_widget_opener').cloudinary_upload_widget(
-                { cloud_name: opts.cloud_name,
+            $('#upload_widget_opener').cloudinary_upload_widget({
+                cloud_name: opts.cloudName,
                 api_key: opts.apiKey,
-                upload_preset: 'default',
+                upload_preset: opts.preset,
                 cropping: 'server'
             },(error, result) => {
                 console.log(error, result)
             });
-            
+
             UIkit.sortable(this.refs.imagescontainer, {
 
                 animation: false
@@ -239,7 +239,7 @@
         selectImages() {
 
             cloudinary.openUploadWidget({
-                upload_preset: 'default',
+                upload_preset: opts.preset,
                 sources: [ 'local', 'url'],
                 theme: 'white',
                 show_powered_by: false
