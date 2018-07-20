@@ -8,8 +8,8 @@ Create new field and choose Cloudinary as a Field Type and add this options
 
 ```JSON
 {
-  "apiKey": "218712563852856",
-  "cloudName": "cockpit-field",
-  "preset": "x94rthum"
+  "apiKey": "your-cloudinary-api-key",
+  "cloudName": "your-cloudinary-cloud-name",
+  "preset": "default"
 }
 ```
